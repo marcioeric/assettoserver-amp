@@ -1,77 +1,14 @@
 [
   {
     "ConfigFile": "cfg/server_cfg.ini",
-    "Importable": true,
-    "Subsections": [
-      {
-        "Heading": "SERVER",
-        "SettingMappings": {
-          "NAME":                  "ServerName",
-          "PASSWORD":              "ServerPassword",
-          "ADMIN_PASSWORD":        "AdminPassword",
-          "MAX_CLIENTS":           "MaxClients",
-          "UDP_PORT":              "UdpPort",
-          "TCP_PORT":              "TcpPort",
-          "HTTP_PORT":             "HttpPort",
-          "TRACK":                 "Track",
-          "CONFIG_TRACK":          "TrackLayout",
-          "CARS":                  "Cars",
-          "MAX_BALLAST_KG":        "MaxBallastKg",
-          "QUALIFY_MAX_WAIT_PERC": "QualifyMaxWaitPerc",
-          "RACE_PIT_WINDOW_START": "RacePitWindowStart",
-          "RACE_PIT_WINDOW_END":   "RacePitWindowEnd",
-          "REVERSED_GRID_RACE_POSITIONS": "ReversedGridRacePositions",
-          "LOCKED_ENTRY_LIST":     "LockedEntryList",
-          "PICKUP_MODE_ENABLED":   "PickupModeEnabled",
-          "LOOP_MODE":             "LoopMode",
-          "SLEEP_TIME":            "SleepTime",
-          "SEND_BUFFER_SIZE":      "SendBufferSize",
-          "RECV_BUFFER_SIZE":      "RecvBufferSize",
-          "USE_FLOW_CONTROL":      "UseFlowControl",
-          "REGISTER_TO_LOBBY":     "RegisterToLobby",
-          "CLIENT_SEND_INTERVAL_HZ": "ClientSendIntervalHz",
-          "DAMAGE_MULTIPLIER":     "DamageMultiplier",
-          "FUEL_RATE":             "FuelRate",
-          "TYRE_WEAR_RATE":        "TyreWearRate",
-          "ALLOWED_TYRES_OUT":     "AllowedTyresOut",
-          "ABS_ALLOWED":           "AbsAllowed",
-          "TC_ALLOWED":            "TcAllowed",
-          "STABILITY_ALLOWED":     "StabilityAllowed",
-          "AUTOCLUTCH_ALLOWED":    "AutoclutchAllowed",
-          "TYRE_BLANKETS_ALLOWED": "TyreBlankets",
-          "FORCE_VIRTUAL_MIRROR":  "ForceVirtualMirror",
-          "RACE_OVER_TIME":        "RaceOverTime",
-          "RESULT_SCREEN_TIME":    "ResultScreenTime",
-          "WELCOME_MESSAGE":       "WelcomeMessage",
-          "SUN_ANGLE":             "SunAngle"
-        }
-      },
-      {
-        "Heading": "WEATHER_0",
-        "SettingMappings": {
-          "GRAPHICS":                    "WeatherGraphics",
-          "BASE_TEMPERATURE_AMBIENT":    "BaseTemperatureAmbient",
-          "BASE_TEMPERATURE_ROAD":       "BaseTemperatureRoad",
-          "VARIATION_AMBIENT":           "VariationAmbient",
-          "VARIATION_ROAD":              "VariationRoad",
-          "WIND_BASE_SPEED_MIN":         "WindBaseSpeedMin",
-          "WIND_BASE_SPEED_MAX":         "WindBaseSpeedMax"
-        }
-      },
-      {
-        "Heading": "PRACTICE",
-        "SettingMappings": {
-          "NAME":    "PracticeName",
-          "TIME":    "PracticeTime",
-          "IS_OPEN": "PracticeIsOpen",
-          "INFINITE": "PracticeInfinite"
-        }
-      }
-    ]
+    "AutoMap": true,
+    "ConfigType": "template",
+    "ConfigFileTemplate": "assettoserver/assettoserverserver_cfg.ini"
   },
   {
     "ConfigFile": "cfg/extra_cfg.yml",
     "AutoMap": true,
-    "Importable": true
+    "ConfigType": "template",
+    "ConfigFileTemplate": "assettoserver/assettoserverextra_cfg.yml"
   }
 ]

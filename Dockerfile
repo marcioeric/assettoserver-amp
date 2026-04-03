@@ -14,21 +14,13 @@ RUN wget https://dot.net/v1/dotnet-install.sh -O /tmp/dotnet-install.sh && \
     ln -s /usr/share/dotnet/dotnet /usr/local/bin/dotnet && \
     rm /tmp/dotnet-install.sh
 
-# Baixa e extrai o AssettoServer em /opt/assettoserver/ (fora do volume montado pelo AMP)
+# Baixa e extrai o AssettoServer em /opt/assettoserver/ (fora do volume /AMP/ montado pelo AMP)
 RUN mkdir -p /opt/assettoserver && \
     wget -q "https://github.com/compujuckel/AssettoServer/releases/download/v${ASSETTOSERVER_VERSION}/assetto-server-linux-x64.tar.gz" \
          -O /tmp/assettoserver.tar.gz && \
     tar -xzf /tmp/assettoserver.tar.gz -C /opt/assettoserver/ && \
     chmod +x /opt/assettoserver/AssettoServer && \
     rm /tmp/assettoserver.tar.gz
-
-# Copia os configs template para /opt/assettoserver/cfg/
-RUN mkdir -p /opt/assettoserver/cfg
-COPY default_server_cfg.ini /opt/assettoserver/cfg/server_cfg.ini
-COPY default_entry_list.ini /opt/assettoserver/cfg/entry_list.ini
-COPY default_extra_cfg.yml /opt/assettoserver/cfg/extra_cfg.yml
-
-
 
 # Obrigatório pelo AMP
 ENTRYPOINT ["/ampstart.sh"]
