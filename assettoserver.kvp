@@ -22,9 +22,9 @@ Meta.AppConfigId=a1b2c3d4-e5f6-7890-abcd-ef1234567890
 Meta.AppIsMultiIPAware=False
 
 App.DisplayName=AssettoServer
-App.RootDir=./assettoserver/
+App.RootDir=
 App.ExecutableLinux=AssettoServer
-App.WorkingDir=./assettoserver/
+App.WorkingDir=
 App.CommandLineArgs=
 App.AppSettings={}
 App.EnvironmentVariables={}

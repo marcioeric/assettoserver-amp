@@ -3,7 +3,7 @@
     "UpdateStageName": "Create cfg directory",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "CreateDirectory",
-    "UpdateSourceArgs": "{{$FullRootDir}}cfg",
+    "UpdateSourceArgs": "{{$FullBaseDir}}cfg",
     "OverwriteExistingFiles": false
   },
   {
@@ -11,7 +11,7 @@
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://public.stagebook.com.br/random/assetto-server-linux-x64.tar.gz",
-    "UpdateSourceTarget": "{{$FullRootDir}}",
+    "UpdateSourceTarget": "{{$FullBaseDir}}",
     "UnzipUpdateSource": true,
     "OverwriteExistingFiles": true,
     "SkipOnFailure": false
@@ -22,7 +22,7 @@
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://public.stagebook.com.br/random/assettoserverserver_cfg.ini",
     "UpdateSourceArgs": "server_cfg.ini",
-    "UpdateSourceTarget": "{{$FullRootDir}}cfg/",
+    "UpdateSourceTarget": "{{$FullBaseDir}}cfg/",
     "OverwriteExistingFiles": false,
     "SkipOnFailure": false
   },
@@ -32,7 +32,7 @@
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://public.stagebook.com.br/random/assettoserverentry_list.ini",
     "UpdateSourceArgs": "entry_list.ini",
-    "UpdateSourceTarget": "{{$FullRootDir}}cfg/",
+    "UpdateSourceTarget": "{{$FullBaseDir}}cfg/",
     "OverwriteExistingFiles": false,
     "SkipOnFailure": false
   },
@@ -42,7 +42,7 @@
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://public.stagebook.com.br/random/assettoserverextra_cfg.yml",
     "UpdateSourceArgs": "extra_cfg.yml",
-    "UpdateSourceTarget": "{{$FullRootDir}}cfg/",
+    "UpdateSourceTarget": "{{$FullBaseDir}}cfg/",
     "OverwriteExistingFiles": false,
     "SkipOnFailure": false
   },
