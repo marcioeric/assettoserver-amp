@@ -5,35 +5,5 @@
     "UpdateSource": "CreateDirectory",
     "UpdateSourceArgs": "{{$FullRootDir}}cfg",
     "OverwriteExistingFiles": false
-  },
-  {
-    "UpdateStageName": "server_cfg.ini (template padrão)",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://raw.githubusercontent.com/marcioeric/assettoserver-amp/main/assettoserverserver_cfg.ini",
-    "UpdateSourceArgs": "server_cfg.ini",
-    "UpdateSourceTarget": "{{$FullRootDir}}cfg/",
-    "OverwriteExistingFiles": false,
-    "SkipOnFailure": false
-  },
-  {
-    "UpdateStageName": "entry_list.ini (template padrão)",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://raw.githubusercontent.com/marcioeric/assettoserver-amp/main/assettoserverentry_list.ini",
-    "UpdateSourceArgs": "entry_list.ini",
-    "UpdateSourceTarget": "{{$FullRootDir}}cfg/",
-    "OverwriteExistingFiles": false,
-    "SkipOnFailure": false
-  },
-  {
-    "UpdateStageName": "extra_cfg.yml (template padrão)",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://raw.githubusercontent.com/marcioeric/assettoserver-amp/main/assettoserverextra_cfg.yml",
-    "UpdateSourceArgs": "extra_cfg.yml",
-    "UpdateSourceTarget": "{{$FullRootDir}}cfg/",
-    "OverwriteExistingFiles": false,
-    "SkipOnFailure": false
   }
 ]

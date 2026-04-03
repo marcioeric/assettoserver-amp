@@ -2,12 +2,14 @@
   {
     "ConfigFile": "cfg/server_cfg.ini",
     "AutoMap": true,
+    "Importable": true,
     "ConfigType": "template",
     "ConfigFileTemplate": "assettoserver/assettoserverserver_cfg.ini"
   },
   {
     "ConfigFile": "cfg/extra_cfg.yml",
     "AutoMap": true,
+    "Importable": true,
     "ConfigType": "template",
     "ConfigFileTemplate": "assettoserver/assettoserverextra_cfg.yml"
   }
