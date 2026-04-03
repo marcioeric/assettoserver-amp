@@ -11,7 +11,8 @@
     "Hidden": true,
     "ParamFieldName": "SERVER.PORT",
     "IncludeInCommandLine": false,
-    "EnumValues": {}
+    "EnumValues": {},
+    "DefaultValue": "{{$ApplicationPort1}}"
   },
   {
     "DisplayName": "HTTP Port",
@@ -25,7 +26,8 @@
     "Hidden": true,
     "ParamFieldName": "SERVER.HTTP_PORT",
     "IncludeInCommandLine": false,
-    "EnumValues": {}
+    "EnumValues": {},
+    "DefaultValue": "{{$ApplicationPort2}}"
   },
   {
     "DisplayName": "Server Name",
