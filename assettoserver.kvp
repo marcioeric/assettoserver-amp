@@ -40,7 +40,7 @@ App.Compatibility=LinuxBufferedConsole
 App.RapidStartup=False
 App.ApplicationReadyMode=RegexMatch
 
-Console.AppReadyRegex=^.*(?:Listening on|Server running|AssettoServer.*started).*$
+Console.AppReadyRegex=^.*Starting update loop.*$
 Console.UserJoinRegex=^.*\[INF\].*(?<username>.+?) connected.*$
 Console.UserLeaveRegex=^.*\[INF\].*(?<username>.+?) disconnected.*$
 Console.UserChatRegex=^.*\[CHAT\]\s+(?<username>.+?):\s+(?<message>.+)$
