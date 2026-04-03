@@ -13,7 +13,6 @@ Template para rodar o [AssettoServer](https://github.com/compujuckel/AssettoServ
 | `configmanifest.json` | UI de configuração no painel do AMP |
 
 ---
-
 ## Passo a passo
 
 ### 1. Build e push da imagem Docker
