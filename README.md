@@ -24,6 +24,7 @@ docker build -t seuuser/assettoserver-amp:latest .
 docker push seuuser/assettoserver-amp:latest
 ```
 
+
 > Se não quiser usar Docker Hub, pode usar qualquer registry acessível pela sua máquina AMP (ex: registry local, GHCR, etc).
 
 ### 2. Atualizar o GenericModule.kvp
