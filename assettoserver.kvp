@@ -1,7 +1,7 @@
 App.DisplayName=AssettoServer
 App.RootDir=
 App.WorkingDir=
-App.ExecutableLinux=AssettoServer
+App.ExecutableLinux=/opt/assettoserver/AssettoServer
 App.HasWriteableConsole=true
 App.HasReadableConsole=true
 App.Compatibility=1
