@@ -81,5 +81,5 @@ Meta.URL=https://github.com/compujuckel/AssettoServer
 Meta.OS=2
 Meta.AppConfigId=a1b2c3d4-e5f6-7890-abcd-ef1234567890
 Meta.DisplayImageSource=url:https://assettoserver.org/img/logo.png
-Meta.ConfigManifest=configmanifest.json
-Meta.ConfigRoot=GenericModule.kvp
+Meta.ConfigManifest=assettoserverconfig.json
+Meta.ConfigRoot=assettoserver.kvp

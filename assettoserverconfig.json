@@ -1,11 +1,4 @@
 [
-  // ============================================================
-  //  AssettoServer - Configuration Manifest para AMP
-  //  Mapeia as principais configs do server_cfg.ini e extra_cfg.yml
-  //  para a UI do painel do AMP (Generic Module)
-  // ============================================================
-
-  // ---- Categoria: Servidor ----
   {
     "DisplayName": "Nome do Servidor",
     "Description": "Nome exibido na lista de servidores do Content Manager.",
@@ -91,8 +84,6 @@
     },
     "DefaultValue": "False"
   },
-
-  // ---- Categoria: Pista & Carros ----
   {
     "DisplayName": "Pista (Track)",
     "Description": "Nome da pasta da pista em content/tracks/. Ex: monza, shuto_revival_project_beta.",
@@ -112,8 +103,6 @@
     "ParamFieldName": "Server.TrackLayout",
     "DefaultValue": ""
   },
-
-  // ---- Categoria: Sessão ----
   {
     "DisplayName": "Tempo de Jogo (minutos)",
     "Description": "Duração da sessão em minutos. Use 0 para ilimitado (ou adicione INFINITE=1 no server_cfg.ini).",
@@ -136,8 +125,6 @@
     "minValue": "0",
     "maxValue": "86399"
   },
-
-  // ---- Categoria: AssettoServer Extra (extra_cfg.yml) ----
   {
     "DisplayName": "Ativar Tráfego AI",
     "Description": "Habilita tráfego de IA. Requer fast_lane.ai na pasta maps/ai/ da pista.",
@@ -212,8 +199,6 @@
     },
     "DefaultValue": "False"
   },
-
-  // ---- Categoria: Clima ----
   {
     "DisplayName": "Tipo de Gráfico de Clima (GRAPHICS)",
     "Description": "String de clima para o server_cfg.ini. Ex: sol_03_scattered_clouds_type=17_time=0_mult=1",
