@@ -22,6 +22,16 @@ RUN mkdir -p /opt/assettoserver && \
     chmod +x /opt/assettoserver/AssettoServer && \
     rm /tmp/assettoserver.tar.gz
 
+# Copia os configs template para /opt/assettoserver/cfg/
+RUN mkdir -p /opt/assettoserver/cfg
+COPY default_server_cfg.ini /opt/assettoserver/cfg/server_cfg.ini
+COPY default_entry_list.ini /opt/assettoserver/cfg/entry_list.ini
+COPY default_extra_cfg.yml /opt/assettoserver/cfg/extra_cfg.yml
+
+# Script wrapper que copia configs e inicia o servidor
+COPY start.sh /opt/assettoserver/start.sh
+RUN chmod +x /opt/assettoserver/start.sh
+
 # Obrigatório pelo AMP
 ENTRYPOINT ["/ampstart.sh"]
 CMD []

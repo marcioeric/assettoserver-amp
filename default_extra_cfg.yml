@@ -1,0 +1,6 @@
+EnableAi: false
+UseSteamAuth: false
+MinimumCSPVersion: 0
+IgnoreConfigurationErrors:
+  MissingCarChecksums: true
+  MissingTrackParams: true

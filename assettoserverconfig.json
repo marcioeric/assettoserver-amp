@@ -37,7 +37,7 @@
     "DisplayName": "Max Clients",
     "Description": "Maximum number of player slots (includes AI slots if AI is enabled).",
     "Keywords": "max,clients,players,slots",
-    "FieldName": "$MaxUsers",
+    "FieldName": "MaxClients",
     "InputType": "number",
     "Category": "Server",
     "ParamFieldName": "MaxClients",
