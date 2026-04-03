@@ -1,6 +1,6 @@
 App.DisplayName=AssettoServer
-App.RootDir=AssettoServer/
-App.WorkingDir=AssettoServer/
+App.RootDir=
+App.WorkingDir=
 App.ExecutableLinux=AssettoServer
 App.HasWriteableConsole=true
 App.HasReadableConsole=true
@@ -11,7 +11,7 @@ App.CommandLineArgs=
 App.EnvironmentVariables={"DOTNET_SYSTEM_GLOBALIZATION_INVARIANT":"1","ASPNETCORE_URLS":"http://0.0.0.0:{{$ApplicationPort2}}"}
 App.ExitMethod=SIGTERM
 App.MaxUsers=16
-App.UpdateSources=[{"UpdateStageName":"Baixar AssettoServer v0.0.54 (Linux x64)","UpdateSourcePlatform":"Linux","UpdateSource":"GithubRelease","UpdateSourceArgs":"compujuckel/AssettoServer","UpdateSourceData":"assetto-server-linux-x64.tar.gz","UpdateSourceVersion":"v0.0.54","UnzipUpdateSource":true,"OverwriteExistingFiles":true,"UpdateSourceTarget":"AssettoServer/"},{"UpdateStageName":"Marcar binário como executável","UpdateSourcePlatform":"Linux","UpdateSource":"SetExecutableFlag","UpdateSourceArgs":"AssettoServer/AssettoServer"}]
+App.UpdateSources=[{"UpdateStageName":"Baixar AssettoServer v0.0.54 (Linux x64)","UpdateSourcePlatform":"Linux","UpdateSource":"GithubRelease","UpdateSourceArgs":"compujuckel/AssettoServer","UpdateSourceData":"assetto-server-linux-x64.tar.gz","UpdateSourceVersion":"v0.0.54","UnzipUpdateSource":true,"OverwriteExistingFiles":true},{"UpdateStageName":"Marcar binário como executável","UpdateSourcePlatform":"Linux","UpdateSource":"SetExecutableFlag","UpdateSourceArgs":"AssettoServer"}]
 Console.AppReadyRegex=^.*(?:Started AssettoServer|Listening on port|Server started).*$
 Console.UserJoinRegex=^.*\[INFO\].*?(?<username>.+?)\s+\(\d+\)\s+joined.*$
 Console.UserLeaveRegex=^.*(?<username>.+?)\s+disconnected.*$
