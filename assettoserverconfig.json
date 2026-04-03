@@ -250,5 +250,29 @@
     "DefaultValue": "0",
     "MinValue": "0",
     "EnumValues": {}
+  },
+  {
+    "DisplayName": "Game Port",
+    "Description": "UDP port for game traffic. Managed by AMP automatically.",
+    "FieldName": "$GamePort",
+    "InputType": "number",
+    "IsFlagArgument": false,
+    "ParamFieldName": "SERVER.PORT",
+    "IncludeInCommandLine": false,
+    "Hidden": true,
+    "DefaultValue": "9600",
+    "EnumValues": {}
+  },
+  {
+    "DisplayName": "HTTP Port",
+    "Description": "TCP port for HTTP API (plugin system, livemap, etc). Managed by AMP automatically.",
+    "FieldName": "$QueryPort",
+    "InputType": "number",
+    "IsFlagArgument": false,
+    "ParamFieldName": "SERVER.HTTP_PORT",
+    "IncludeInCommandLine": false,
+    "Hidden": true,
+    "DefaultValue": "8081",
+    "EnumValues": {}
   }
 ]
