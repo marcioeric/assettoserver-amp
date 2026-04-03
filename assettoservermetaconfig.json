@@ -12,5 +12,18 @@
     "Importable": true,
     "ConfigType": "template",
     "ConfigFileTemplate": "assettoserver/assettoserverextra_cfg.yml"
+  },
+  {
+    "ConfigFile": "cfg/server_cfg.ini",
+    "ConfigType": "ini",
+    "Subsections": [
+      {
+        "Heading": "SERVER",
+        "SettingMappings": {
+          "PORT": "Port",
+          "HTTP_PORT": "HttpPort"
+        }
+      }
+    ]
   }
 ]

@@ -1,35 +1,5 @@
 [
   {
-    "DisplayName": "Game Port",
-    "Category": "AssettoServer:stadia_controller",
-    "Subcategory": "Server:dns:1",
-    "Description": "",
-    "Keywords": "",
-    "FieldName": "$GamePort",
-    "InputType": "number",
-    "IsFlagArgument": false,
-    "Hidden": true,
-    "ParamFieldName": "SERVER.PORT",
-    "IncludeInCommandLine": false,
-    "EnumValues": {},
-    "DefaultValue": "{{$ApplicationPort1}}"
-  },
-  {
-    "DisplayName": "HTTP Port",
-    "Category": "AssettoServer:stadia_controller",
-    "Subcategory": "Server:dns:1",
-    "Description": "",
-    "Keywords": "",
-    "FieldName": "$ApplicationPort2",
-    "InputType": "number",
-    "IsFlagArgument": false,
-    "Hidden": true,
-    "ParamFieldName": "SERVER.HTTP_PORT",
-    "IncludeInCommandLine": false,
-    "EnumValues": {},
-    "DefaultValue": "{{$ApplicationPort2}}"
-  },
-  {
     "DisplayName": "Server Name",
     "Category": "AssettoServer:stadia_controller",
     "Subcategory": "Server:dns:1",
