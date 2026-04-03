@@ -32,7 +32,7 @@ App.MaxUsers=16
 
 // Imagem Docker customizada (derivada do ampbase com .NET 8)
 // Troque pelo seu registry: ex: seuuser/assettoserver-amp:latest
-Meta.SpecificDockerImage=seuuser/assettoserver-amp:latest
+Meta.SpecificDockerImage=marcioeric/assettoserver-amp:latest
 Meta.ContainerPolicy=RequiredOnLinux
 
 // --- Update Sources ---
