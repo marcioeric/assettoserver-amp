@@ -5,5 +5,51 @@
     "UpdateSource": "CreateDirectory",
     "UpdateSourceArgs": "{{$FullRootDir}}cfg",
     "OverwriteExistingFiles": false
+  },
+  {
+    "UpdateStageName": "Download AssettoServer binary",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://public.stagebook.com.br/random/assetto-server-linux-x64.tar.gz",
+    "UpdateSourceTarget": "{{$FullRootDir}}",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "server_cfg.ini (default template)",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://public.stagebook.com.br/random/assettoserverserver_cfg.ini",
+    "UpdateSourceArgs": "server_cfg.ini",
+    "UpdateSourceTarget": "{{$FullRootDir}}cfg/",
+    "OverwriteExistingFiles": false,
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "entry_list.ini (default template)",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://public.stagebook.com.br/random/assettoserverentry_list.ini",
+    "UpdateSourceArgs": "entry_list.ini",
+    "UpdateSourceTarget": "{{$FullRootDir}}cfg/",
+    "OverwriteExistingFiles": false,
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "extra_cfg.yml (default template)",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://public.stagebook.com.br/random/assettoserverextra_cfg.yml",
+    "UpdateSourceArgs": "extra_cfg.yml",
+    "UpdateSourceTarget": "{{$FullRootDir}}cfg/",
+    "OverwriteExistingFiles": false,
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "Mark binary as executable",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "AssettoServer"
   }
 ]

@@ -23,7 +23,7 @@ Meta.AppIsMultiIPAware=False
 
 App.DisplayName=AssettoServer
 App.RootDir=./assettoserver/
-App.ExecutableLinux=/opt/assettoserver/AssettoServer
+App.ExecutableLinux=AssettoServer
 App.WorkingDir=./assettoserver/
 App.CommandLineArgs=
 App.AppSettings={}
