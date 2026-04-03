@@ -1,0 +1,248 @@
+[
+  // ============================================================
+  //  AssettoServer - Configuration Manifest para AMP
+  //  Mapeia as principais configs do server_cfg.ini e extra_cfg.yml
+  //  para a UI do painel do AMP (Generic Module)
+  // ============================================================
+
+  // ---- Categoria: Servidor ----
+  {
+    "DisplayName": "Nome do Servidor",
+    "Description": "Nome exibido na lista de servidores do Content Manager.",
+    "FieldName": "ServerName",
+    "InputType": "text",
+    "Category": "Servidor",
+    "ParamFieldName": "Server.Name",
+    "DefaultValue": "AssettoServer",
+    "Required": true
+  },
+  {
+    "DisplayName": "Senha do Servidor",
+    "Description": "Deixe em branco para servidor público.",
+    "FieldName": "ServerPassword",
+    "InputType": "password",
+    "Category": "Servidor",
+    "ParamFieldName": "Server.Password",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Senha de Admin",
+    "Description": "Senha usada para se tornar admin via /admin no chat.",
+    "FieldName": "AdminPassword",
+    "InputType": "password",
+    "Category": "Servidor",
+    "ParamFieldName": "Server.AdminPassword",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Máximo de Jogadores",
+    "Description": "Número máximo de slots de jogadores (inclui slots de AI).",
+    "FieldName": "MaxClients",
+    "InputType": "number",
+    "Category": "Servidor",
+    "ParamFieldName": "Server.MaxClients",
+    "DefaultValue": "16",
+    "minValue": "1",
+    "maxValue": "200"
+  },
+  {
+    "DisplayName": "Porta UDP (Game)",
+    "Description": "Porta principal do jogo (UDP). Deve corresponder à ApplicationPort1.",
+    "FieldName": "UdpPort",
+    "InputType": "number",
+    "Category": "Servidor",
+    "ParamFieldName": "Server.UdpPort",
+    "DefaultValue": "9600",
+    "minValue": "1024",
+    "maxValue": "65535"
+  },
+  {
+    "DisplayName": "Porta TCP (Game)",
+    "Description": "Porta TCP do jogo. Normalmente igual à UDP.",
+    "FieldName": "TcpPort",
+    "InputType": "number",
+    "Category": "Servidor",
+    "ParamFieldName": "Server.TcpPort",
+    "DefaultValue": "9600",
+    "minValue": "1024",
+    "maxValue": "65535"
+  },
+  {
+    "DisplayName": "Porta HTTP (Admin/API)",
+    "Description": "Porta HTTP do AssettoServer para API e interface web. Deve corresponder à ApplicationPort2.",
+    "FieldName": "HttpPort",
+    "InputType": "number",
+    "Category": "Servidor",
+    "ParamFieldName": "Server.HttpPort",
+    "DefaultValue": "8081",
+    "minValue": "1024",
+    "maxValue": "65535"
+  },
+  {
+    "DisplayName": "Registrar no Lobby Kunos",
+    "Description": "Se ativado, o servidor aparece na lista pública do Assetto Corsa.",
+    "FieldName": "RegisterToLobby",
+    "InputType": "checkbox",
+    "Category": "Servidor",
+    "ParamFieldName": "Server.RegisterToLobby",
+    "EnumValues": {
+      "False": "0",
+      "True": "1"
+    },
+    "DefaultValue": "False"
+  },
+
+  // ---- Categoria: Pista & Carros ----
+  {
+    "DisplayName": "Pista (Track)",
+    "Description": "Nome da pasta da pista em content/tracks/. Ex: monza, shuto_revival_project_beta.",
+    "FieldName": "Track",
+    "InputType": "text",
+    "Category": "Pista & Carros",
+    "ParamFieldName": "Server.Track",
+    "DefaultValue": "monza",
+    "Required": true
+  },
+  {
+    "DisplayName": "Layout da Pista",
+    "Description": "Layout específico da pista. Deixe em branco para o layout padrão.",
+    "FieldName": "TrackLayout",
+    "InputType": "text",
+    "Category": "Pista & Carros",
+    "ParamFieldName": "Server.TrackLayout",
+    "DefaultValue": ""
+  },
+
+  // ---- Categoria: Sessão ----
+  {
+    "DisplayName": "Tempo de Jogo (minutos)",
+    "Description": "Duração da sessão em minutos. Use 0 para ilimitado (ou adicione INFINITE=1 no server_cfg.ini).",
+    "FieldName": "SessionTime",
+    "InputType": "number",
+    "Category": "Sessão",
+    "ParamFieldName": "Server.SessionTime",
+    "DefaultValue": "0",
+    "minValue": "0",
+    "maxValue": "9999"
+  },
+  {
+    "DisplayName": "Hora do Dia (segundos desde 00:00)",
+    "Description": "Hora inicial da sessão. Ex: 43200 = meio-dia, 64800 = 18h.",
+    "FieldName": "SunAngle",
+    "InputType": "number",
+    "Category": "Sessão",
+    "ParamFieldName": "Server.SunAngle",
+    "DefaultValue": "43200",
+    "minValue": "0",
+    "maxValue": "86399"
+  },
+
+  // ---- Categoria: AssettoServer Extra (extra_cfg.yml) ----
+  {
+    "DisplayName": "Ativar Tráfego AI",
+    "Description": "Habilita tráfego de IA. Requer fast_lane.ai na pasta maps/ai/ da pista.",
+    "FieldName": "EnableAi",
+    "InputType": "checkbox",
+    "Category": "AssettoServer Extra",
+    "ParamFieldName": "EnableAi",
+    "EnumValues": {
+      "False": "false",
+      "True": "true"
+    },
+    "DefaultValue": "False"
+  },
+  {
+    "DisplayName": "Máximo de Jogadores Humanos (AI slots)",
+    "Description": "Quando EnableAi está ativo, define o máximo de humanos — o restante dos slots vira AI. Ex: 8 em 20 slots = 12 AI.",
+    "FieldName": "MaxPlayerCount",
+    "InputType": "number",
+    "Category": "AssettoServer Extra",
+    "ParamFieldName": "MaxPlayerCount",
+    "DefaultValue": "8",
+    "minValue": "1",
+    "maxValue": "200"
+  },
+  {
+    "DisplayName": "Ativar Steam Auth",
+    "Description": "Recomendado. Exige CSP 0.1.75+ e Content Manager. Previne SteamID spoofing.",
+    "FieldName": "UseSteamAuth",
+    "InputType": "checkbox",
+    "Category": "AssettoServer Extra",
+    "ParamFieldName": "UseSteamAuth",
+    "EnumValues": {
+      "False": "false",
+      "True": "true"
+    },
+    "DefaultValue": "False"
+  },
+  {
+    "DisplayName": "Versão Mínima do CSP",
+    "Description": "ID numérico mínimo do Custom Shaders Patch. 1937 = v0.1.77. 0 para desativar requisito.",
+    "FieldName": "MinimumCSPVersion",
+    "InputType": "number",
+    "Category": "AssettoServer Extra",
+    "ParamFieldName": "MinimumCSPVersion",
+    "DefaultValue": "0",
+    "minValue": "0",
+    "maxValue": "9999"
+  },
+  {
+    "DisplayName": "Ignorar Erro: Checksums de Carro Ausentes",
+    "Description": "Permite iniciar o servidor quando faltam checksums de carros. Útil para carros mod.",
+    "FieldName": "IgnoreMissingCarChecksums",
+    "InputType": "checkbox",
+    "Category": "AssettoServer Extra",
+    "ParamFieldName": "IgnoreConfigurationErrors.MissingCarChecksums",
+    "EnumValues": {
+      "False": "false",
+      "True": "true"
+    },
+    "DefaultValue": "False"
+  },
+  {
+    "DisplayName": "Permitir Dados de Carro Modificados pelo Cliente",
+    "Description": "Se ativado, jogadores podem modificar dados do carro sem serem kickados.",
+    "FieldName": "AllowUserToJoinWithoutChecksums",
+    "InputType": "checkbox",
+    "Category": "AssettoServer Extra",
+    "ParamFieldName": "AllowUserToJoinWithoutChecksums",
+    "EnumValues": {
+      "False": "false",
+      "True": "true"
+    },
+    "DefaultValue": "False"
+  },
+
+  // ---- Categoria: Clima ----
+  {
+    "DisplayName": "Tipo de Gráfico de Clima (GRAPHICS)",
+    "Description": "String de clima para o server_cfg.ini. Ex: sol_03_scattered_clouds_type=17_time=0_mult=1",
+    "FieldName": "WeatherGraphics",
+    "InputType": "text",
+    "Category": "Clima",
+    "ParamFieldName": "Weather.Graphics",
+    "DefaultValue": "3_clear"
+  },
+  {
+    "DisplayName": "Temperatura Ambiente Base (°C)",
+    "Description": "Temperatura ambiente base da sessão.",
+    "FieldName": "BaseAmbientTemp",
+    "InputType": "number",
+    "Category": "Clima",
+    "ParamFieldName": "Weather.BaseTemperatureAmbient",
+    "DefaultValue": "22",
+    "minValue": "-20",
+    "maxValue": "50"
+  },
+  {
+    "DisplayName": "Temperatura da Pista Base (°C delta)",
+    "Description": "Delta de temperatura da pista em relação ao ambiente.",
+    "FieldName": "BaseRoadTemp",
+    "InputType": "number",
+    "Category": "Clima",
+    "ParamFieldName": "Weather.BaseTemperatureRoad",
+    "DefaultValue": "7",
+    "minValue": "-10",
+    "maxValue": "30"
+  }
+]
