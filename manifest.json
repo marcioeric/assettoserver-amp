@@ -1,0 +1,14 @@
+{
+  "id": "marcioeric-assettoserver-amp",
+  "origin": "marcioeric",
+  "url": "https://github.com/marcioeric/assettoserver-amp",
+  "prefix": "AS",
+  "configurations": [
+    {
+      "id": "assettoserver",
+      "displayName": "AssettoServer (Community Fork)",
+      "configRoot": "GenericModule.kvp",
+      "configManifest": "configmanifest.json"
+    }
+  ]
+}
