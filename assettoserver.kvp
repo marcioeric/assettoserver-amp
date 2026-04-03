@@ -18,6 +18,7 @@ Console.UserLeaveRegex=^.*(?<username>.+?)\s+disconnected.*$
 Console.UserChatRegex=^.*\[CHAT\]\s+(?<username>.+?):\s+(?<message>.+)$
 Console.ThrowawayMessageRegex=^.*(?:Heartbeat|KeepAlive|GarbageCollect|System\.Threading).*$
 Meta.DisplayName=AssettoServer (compujuckel)
+Meta.Description=Custom Assetto Corsa server focused on freeroam, with AI traffic, dynamic weather and security fixes. Community fork by compujuckel.
 Meta.Author=compujuckel / community
 Meta.URL=https://github.com/compujuckel/AssettoServer
 Meta.OS=2
