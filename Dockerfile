@@ -14,12 +14,12 @@ RUN wget https://dot.net/v1/dotnet-install.sh -O /tmp/dotnet-install.sh && \
     ln -s /usr/share/dotnet/dotnet /usr/local/bin/dotnet && \
     rm /tmp/dotnet-install.sh
 
-# Baixa e extrai o AssettoServer direto na imagem em /AMP/
-RUN mkdir -p /AMP && \
+# Baixa e extrai o AssettoServer em /AMP/GenericApplication/ (diretório padrão do AMP)
+RUN mkdir -p /AMP/GenericApplication && \
     wget -q "https://github.com/compujuckel/AssettoServer/releases/download/v${ASSETTOSERVER_VERSION}/assetto-server-linux-x64.tar.gz" \
          -O /tmp/assettoserver.tar.gz && \
-    tar -xzf /tmp/assettoserver.tar.gz -C /AMP/ && \
-    chmod +x /AMP/AssettoServer && \
+    tar -xzf /tmp/assettoserver.tar.gz -C /AMP/GenericApplication/ && \
+    chmod +x /AMP/GenericApplication/AssettoServer && \
     rm /tmp/assettoserver.tar.gz
 
 # Obrigatório pelo AMP
