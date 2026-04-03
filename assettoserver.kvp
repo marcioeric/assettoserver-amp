@@ -1,10 +1,3 @@
-// ============================================================
-//  AssettoServer (compujuckel fork) - AMP Generic Module
-//  Versão alvo: v0.0.54 (latest stable)
-//  Plataforma: Linux + Docker (cubecoders/ampbase derivado)
-// ============================================================
-
-// --- Application ---
 App.DisplayName=AssettoServer
 App.RootDir=AssettoServer/
 App.WorkingDir=AssettoServer/
@@ -12,69 +5,18 @@ App.ExecutableLinux=AssettoServer
 App.HasWriteableConsole=true
 App.HasReadableConsole=true
 App.Compatibility=1
-
-// Porta TCP principal (game) + HTTP admin
 App.ApplicationPort1=9600
 App.ApplicationPort2=8081
-
-// Argumentos de linha de comando
-// O AssettoServer lê as configs do diretório cfg/ automaticamente
-// Não precisa de args especiais para iniciar, mas suporta --plugins-from-workdir
 App.CommandLineArgs=
-
-// Variáveis de ambiente úteis para .NET no Linux
 App.EnvironmentVariables={"DOTNET_SYSTEM_GLOBALIZATION_INVARIANT":"1","ASPNETCORE_URLS":"http://0.0.0.0:{{$ApplicationPort2}}"}
-
-// Método de parada: SIGTERM (AssettoServer respeita)
 App.ExitMethod=SIGTERM
-
 App.MaxUsers=16
-
-// Imagem Docker customizada (derivada do ampbase com .NET 8)
-// Troque pelo seu registry: ex: seuuser/assettoserver-amp:latest
-Meta.SpecificDockerImage=marcioeric/assettoserver-amp:latest
-Meta.ContainerPolicy=RequiredOnLinux
-
-// --- Update Sources ---
-// Baixa a release estável v0.0.54 do GitHub (tar.gz Linux x64)
-App.UpdateSources=[
-  {
-    "UpdateStageName": "Baixar AssettoServer v0.0.54 (Linux x64)",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "GithubRelease",
-    "UpdateSourceArgs": "compujuckel/AssettoServer",
-    "UpdateSourceData": "assetto-server-linux-x64.tar.gz",
-    "UpdateSourceVersion": "v0.0.54",
-    "UnzipUpdateSource": true,
-    "OverwriteExistingFiles": true,
-    "UpdateSourceTarget": "AssettoServer/"
-  },
-  {
-    "UpdateStageName": "Marcar binário como executável",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "SetExecutableFlag",
-    "UpdateSourceArgs": "AssettoServer/AssettoServer"
-  }
-]
-
-// --- Console ---
-// Regex de "servidor pronto" — AssettoServer loga algo como:
-// "Started AssettoServer..." ou "Listening on port"
+App.UpdateSources=[{"UpdateStageName":"Baixar AssettoServer v0.0.54 (Linux x64)","UpdateSourcePlatform":"Linux","UpdateSource":"GithubRelease","UpdateSourceArgs":"compujuckel/AssettoServer","UpdateSourceData":"assetto-server-linux-x64.tar.gz","UpdateSourceVersion":"v0.0.54","UnzipUpdateSource":true,"OverwriteExistingFiles":true,"UpdateSourceTarget":"AssettoServer/"},{"UpdateStageName":"Marcar binário como executável","UpdateSourcePlatform":"Linux","UpdateSource":"SetExecutableFlag","UpdateSourceArgs":"AssettoServer/AssettoServer"}]
 Console.AppReadyRegex=^.*(?:Started AssettoServer|Listening on port|Server started).*$
-
-// Player join — log típico: "[INFO] Steam auth: PlayerName (12345678) joined"
-Console.UserJoinRegex=^.*\[INFO\].*?(?P<username>.+?)\s+\(\d+\)\s+joined.*$
-
-// Player leave — log típico: "PlayerName disconnected"
-Console.UserLeaveRegex=^.*(?P<username>.+?)\s+disconnected.*$
-
-// Chat — log típico: "[CHAT] PlayerName: mensagem"
-Console.UserChatRegex=^.*\[CHAT\]\s+(?P<username>.+?):\s+(?P<message>.+)$
-
-// Descarta linhas de heartbeat/debug desnecessárias
+Console.UserJoinRegex=^.*\[INFO\].*?(?<username>.+?)\s+\(\d+\)\s+joined.*$
+Console.UserLeaveRegex=^.*(?<username>.+?)\s+disconnected.*$
+Console.UserChatRegex=^.*\[CHAT\]\s+(?<username>.+?):\s+(?<message>.+)$
 Console.ThrowawayMessageRegex=^.*(?:Heartbeat|KeepAlive|GarbageCollect|System\.Threading).*$
-
-// --- Meta ---
 Meta.DisplayName=AssettoServer (compujuckel)
 Meta.Author=compujuckel / community
 Meta.URL=https://github.com/compujuckel/AssettoServer
@@ -83,3 +25,5 @@ Meta.AppConfigId=a1b2c3d4-e5f6-7890-abcd-ef1234567890
 Meta.DisplayImageSource=url:https://assettoserver.org/img/logo.png
 Meta.ConfigManifest=assettoserverconfig.json
 Meta.ConfigRoot=assettoserver.kvp
+Meta.SpecificDockerImage=marcioeric/assettoserver-amp:latest
+Meta.ContainerPolicy=RequiredOnLinux
